@@ -3,10 +3,12 @@
 import sys
 import numpy as np
 
-time = np.loadtxt(sys.argv[1])[:,0]
-flux = np.loadtxt(sys.argv[1])[:,1]
-err = np.loadtxt(sys.argv[1])[:,2]
+data = np.loadtxt(sys.argv[1])
 sig = float(sys.argv[2])
+
+time = data[:,0]
+flux = data[:,1]
+err = data[:,2]
 
 iter = 5
 
