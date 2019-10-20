@@ -4,12 +4,12 @@ import sys
 import numpy as np
 
 data = np.loadtxt(sys.argv[1])
+gap_size = float(sys.argv[2]) # size of data gap (days)
+rem_width = float(sys.argv[3]) # width of data to remove from start/end of gap (days) 
+
 time = data[:,0]
 flux = data[:,1]
 err = data[:,2]
-
-gap_size = float(sys.argv[2]) # size of data gap (days)
-rem_width = float(sys.argv[3]) # width of data to remove from start/end of gap (days) 
 
 gaps = []
 rem = []
