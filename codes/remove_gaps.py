@@ -1,5 +1,3 @@
-# Remove data near gaps in a light curve
-
 import sys
 import numpy as np
 
