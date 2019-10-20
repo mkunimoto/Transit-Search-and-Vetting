@@ -5,7 +5,6 @@ data = np.loadtxt(sys.argv[1])
 per = float(sys.argv[2])
 epo = float(sys.argv[3])
 dur = float(sys.argv[4])
-
 time = data[:,0]
 flux = data[:,1]
 
@@ -38,6 +37,7 @@ SNRm = 0.0
 count = 0.0
 gap = 0.0
 flags = []
+depths = []
 
 for i in range(len(times)):
     transit = v[np.argwhere(abs(time - times[i]) <= 0.5*dur)].flatten()
@@ -48,6 +48,7 @@ for i in range(len(times)):
     else:
         N += 1.
         depi = -np.mean(transit)
+	depths.append(depi)
         SNRi = depi/std*np.sqrt(num)
         if SNRi > SNRm:
             SNRm = SNRi
@@ -61,6 +62,14 @@ for i in range(len(times)):
         if (SNRi < 0):
             flag.append(i)
 
+# Depth mean-to-median ratio
+depths = np.asarray(depths)
+DMM = np.mean(depths)/np.median(depths)
+
+# Fraction of gapped events
+gapped = gap/len(times)
+
+# If number of transits is less than 5, do the chases test
 if N <= 5.:
     ses = np.zeros(len(time))
     for i in range(len(time)):
@@ -85,9 +94,7 @@ list6 = list(set(flag))
 count6 = count+len(list6)
 N6 = len(times) - count6
 
-gapped = gap/len(times)
-
-# Re-calculate SNR
+# Re-calculate SNR and N after removing flagged transits 
 if len(list6) > 0:
     indices = np.argwhere(abs(time - times[list6[0]]) <= 0.5*dur)
     for i in range(1,len(list6)):
@@ -111,11 +118,11 @@ else:
     SNR6 = SNR
 
 if N <= 5.:
-    print best_dep, SNRm, SNRm/SNR, gapped, int(N6), np.median(C), SNR6
+    print best_dep, SNRm, SNRm/SNR, DMM, gapped, int(N6), np.median(C), SNR6
 else:
-    print best_dep, SNRm, SNRm/SNR, gapped, int(N6), float('nan'), SNR6
+    print best_dep, SNRm, SNRm/SNR, DMM, gapped, int(N6), float('nan'), SNR6
 
-# Returns depth of transit, max individual transit SNR, ratio of max SNR to SNR, fraction of gapped events, number of transits, re-calculated number of transits after removing flagged transits, median of chases metrics, re-calculated SNR after removing flagged transits.
+# Returns depth of transit, max individual transit SNR, ratio of max SNR to SNR, depth mean-to-median ratio, fraction of gapped events, number of transits, re-calculated number of transits after removing flagged transits, median of chases metrics, re-calculated SNR after removing flagged transits.
 
 
 	
