@@ -1,5 +1,3 @@
-# Sigma-clip a light curve in the positive flux direction
-
 import sys
 import numpy as np
 
