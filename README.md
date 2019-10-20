@@ -33,7 +33,7 @@ Note: full pipeline uses `transitfind2` from the Kepler Transit Model Codebase t
 
 `get_full_template.py`: takes a list of periods, epochs, and depths corresponding to an arbitrary number of planets and produces a multi-planet model file for use in the Kepler Transit Model Codebase.
 
-`transit_tests.py`: outputs result for the depth mean-to-median test (Sec. 3.2.3), chases tests (Sec. 3.2.4), and signal event domination test (Sec. 3.2.7).
+`transit_tests.py`: outputs results for the depth mean-to-median test (Sec. 3.2.3), chases tests (Sec. 3.2.4), and signal event domination test (Sec. 3.2.7).
 
 `model_tests.py`: fits transit model and provides best-fit parameters. Requires stellar properties and limb-darkening parameters as inputs. Also outputs results for the transit model fit test (Sec. 3.2.1), transit model SNR test (Sec. 3.2.2), first odd-even depth test (Sec. 3.3.3), and V-shape test (Sec. 3.3.4).
 
