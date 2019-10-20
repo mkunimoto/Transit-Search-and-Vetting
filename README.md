@@ -1,6 +1,6 @@
 # Transit-Search-and-Vetting
 
-Transiting exoplanet search and vetting pipeline described in Kunimoto et al. (2019), written for use on light curve data from the original Kepler mission to find multi-planet systems.
+Transiting exoplanet search and vetting pipeline described in Kunimoto et al. (2019), written for use on light curve data to find multi-planet systems.
 
 The pipeline also uses: 
 
