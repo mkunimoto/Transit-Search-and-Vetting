@@ -1,15 +1,15 @@
 # Transit-Search-and-Vetting
 
-Transiting exoplanet search and vetting codes described in Kunimoto et al. (2019), for use on light curve data to find multi-planet systems.
+Transiting exoplanet search and vetting codes described in Kunimoto et al. (2020), for use on light curve data to find multi-planet systems.
 
 The pipeline also uses: 
 
 - the [Kepler Transit Model Codebase](https://github.com/jasonfrowe/Kepler) for data reduction and the transit search (Rowe, J. 2016, Zenodo. http://doi.org/10.5281/zenodo.60297)
 - [Model-Shift](https://github.com/JeffLCoughlin/Model-Shift) for part of the vetting pipeline (Coughlin, J. L. 2017, KSCI-19105-002)
 
-If you use these codes, please cite the following:
+If you use the following codes, please cite the following:
 
-Kunimoto, M., Matthews, J., and Ngo, H. 2019, Searching the Entirety of Kepler Data. I. 21 New Planets and Planet Candidates Including 1 Confirmed Habitable Zone World, submitted to AAS journals.
+Kunimoto, M., Matthews, J., and Ngo, H. 2020, Searching the Entirety of Kepler Data. I. 17 New Planet Candidates Including 1 Habitable Zone World, submitted to AAS journals.
 
 ## Codes Provided
 
