@@ -9,7 +9,7 @@ The pipeline also uses:
 
 If you use the following codes, please cite the following:
 
-Kunimoto, M., Matthews, J., and Ngo, H. 2020, Searching the Entirety of Kepler Data. I. 17 New Planet Candidates Including 1 Habitable Zone World, submitted to AAS journals.
+Kunimoto, M., Matthews, J., and Ngo, H. 2020, Searching the Entirety of Kepler Data. I. 17 New Planet Candidates Including 1 Habitable Zone World, AJ, 159, 124
 
 ## Codes Provided
 
